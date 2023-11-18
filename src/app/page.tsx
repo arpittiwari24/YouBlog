@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import React, {useState, useEffect} from "react";
+import SigninButton from "./components/SignInButton";
+import {useSession} from "next-auth/react"
+import LandingPage from "./components/LandingPage";
 
 export default function Home() {
   const [videoURL, setVideoURL] = useState<string>('')
@@ -9,6 +12,8 @@ export default function Home() {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("")
   const [blog, setBlog] = useState<string>("")
+
+  const { data : session} = useSession()
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setVideoURL(event.target.value);
@@ -51,6 +56,8 @@ export default function Home() {
     }
   };
 
+  if(!session) return <LandingPage />
+
   return (
     <>
     <div className="flex items-center justify-center py-10">
@@ -66,6 +73,7 @@ export default function Home() {
           <button type="submit" className="w-full mt-2 bg-blue-500 text-white py-2 rounded">
             Generate Blog
           </button>
+          <SigninButton />
         </form>
         </div>
         </div>

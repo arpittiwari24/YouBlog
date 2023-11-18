@@ -9,16 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/supabase-adapter": "^0.1.7",
     "@lexical/react": "^0.12.2",
-    "draft-js": "^0.11.7",
+    "@supabase/auth-helpers-nextjs": "^0.8.7",
+    "@supabase/supabase-js": "^2.38.4",
     "lexical": "^0.12.2",
     "next": "^13.5.6",
+    "next-auth": "^4.24.5",
+    "preline": "^2.0.0",
     "react": "^18",
-    "react-dom": "^18",
-    "react-draft-wysiwyg": "^1.15.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/draft-js": "^0.11.15",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
