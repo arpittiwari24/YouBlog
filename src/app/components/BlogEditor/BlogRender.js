@@ -24,7 +24,7 @@ function Placeholder() {
 export default async function EditorRender({dataToRender}) {
 
     const editorConfig = {
-        editable: false,
+        editable: true,
         editorState: dataToRender,
         theme: ExampleTheme,
         // Handling of errors during update

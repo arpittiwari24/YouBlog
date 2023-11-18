@@ -62,6 +62,7 @@ function OnChangePlugin({ onChange }) {
 
 export default function Editor({ onEditorStateChange }) {
   const [editorState, setEditorState] = useState();
+
   function onChange(editorState) {
     // Call toJSON on the EditorState object, which produces a serialization safe string
     const editorStateJSON = editorState.toJSON();

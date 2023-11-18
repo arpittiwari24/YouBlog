@@ -16,10 +16,10 @@ export default function Editor() {
     //         redirect('/signin?callbackUrl=/blog/write')
     //     }
     //     })
-        const [title, setTitle] = useState("");
+        const [title, setTitle] = useState<string>("");
         const [editorState, setEditorState] = useState();
-        const [isbuttonEnabled, setIsbuttonEnabled] = useState(false);
-        const [isContentEntered, setIsContentEntered] = useState(false)
+        const [isbuttonEnabled, setIsbuttonEnabled] = useState<boolean>(false);
+        const [isContentEntered, setIsContentEntered] = useState<boolean>(false)
 
 
      function handleEditorStateChange(newState: any) {
