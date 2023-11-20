@@ -1,5 +1,4 @@
 import Faq from "./Faq";
-import Features from "./Features";
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
@@ -11,7 +10,6 @@ export default function LandingPage() {
       <>
      <Navbar />
      <Hero />
-     <Features />
      <Faq />
      <Footer />
 </>
